@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For Pavy 💗</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+*{
+box-sizing:border-box;
+}
+
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+overflow:hidden;
+background:linear-gradient(#ffdff0,#fff5fa);
+}
+
+
+.scene{
+height:100vh;
+width:100%;
+display:none;
+text-align:center;
+padding:40px;
+position:relative;
+}
+
+.active{
+display:block;
+animation:fade 1s;
+}
+
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+
+h1{
+color:#ff5c9d;
+font-size:35px;
+}
+
+p{
+color:#666;
+font-size:20px;
+line-height:1.6;
+}
+
+
+button{
+background:#ff8fbd;
+border:0;
+padding:15px 35px;
+border-radius:30px;
+color:white;
+font-size:18px;
+cursor:pointer;
+box-shadow:0 5px 15px #ffc1d9;
+}
+
+button:hover{
+transform:scale(1.1);
+}
+
+
+
+/* FLOWERS */
+
+.flower{
+font-size:80px;
+animation:bloom 1.5s infinite alternate;
+}
+
+
+@keyframes bloom{
+from{
+transform:scale(.9);
+}
+to{
+transform:scale(1.15);
+}
+}
+
+
+
+/* CHARACTERS */
+
+.person{
+width:180px;
+height:260px;
+margin:20px auto;
+position:relative;
+animation:float 2s infinite alternate;
+}
+
+
+@keyframes float{
+from{
+transform:translateY(0);
+}
+to{
+transform:translateY(-10px);
+}
+}
+
+
+.head{
+position:absolute;
+top:20px;
+left:35px;
+width:110px;
+height:100px;
+background:#ffd7b5;
+border-radius:50%;
+}
+
+
+.hair{
+position:absolute;
+top:5px;
+left:25px;
+width:130px;
+height:80px;
+background:#432b2b;
+border-radius:70px 70px 30px 30px;
+}
+
+
+.eye{
+position:absolute;
+top:65px;
+width:14px;
+height:22px;
+background:#222;
+border-radius:50%;
+}
+
+
+.left{
+left:35px;
+}
+
+.right{
+right:35px;
+}
+
+
+.smile{
+position:absolute;
+top:88px;
+left:43px;
+width:25px;
+height:10px;
+border-bottom:4px solid #ff6b9e;
+border-radius:50%;
+}
+
+
+.body{
+position:absolute;
+top:120px;
+left:40px;
+width:100px;
+height:120px;
+border-radius:50px 50px 20px 20px;
+background:#ffb6d9;
+}
+
+
+.girlDress{
+background:#ff9fc9;
+}
+
+
+.boyShirt{
+background:#9ccaff;
+}
+
+
+.glasses{
+position:absolute;
+top:58px;
+left:40px;
+font-size:32px;
+}
+
+
+
+/* MOOD SCALE */
+
+
+.scale{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:18px;
+margin-top:40px;
+}
+
+
+.face{
+font-size:45px;
+cursor:pointer;
+transition:.3s;
+}
+
+
+.face:hover{
+transform:scale(1.3);
+}
+
+
+
+/* PETALS */
+
+.petals{
+position:absolute;
+font-size:35px;
+animation:fall 5s linear infinite;
+}
+
+
+@keyframes fall{
+0%{
+top:-50px;
+}
+100%{
+top:100vh;
+}
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- SCENE 1 -->
+
+<div class="scene active" id="s1">
+
+<h1>I heard you're feeling a little down 🥺</h1>
+
+<div class="flower">
+🌸
+</div>
+
+<p>
+So I made you a tiny love movie...
+because someone loves you very much 💗
+</p>
+
+
+<button onclick="next(2)">
+Start 💕
+</button>
+
+</div>
+
+
+
+
+<!-- SCENE 2 -->
+
+<div class="scene" id="s2">
+
+<h1>Tell me honestly...</h1>
+
+<p>
+On a scale of 1-10...
+how down are you today?
+</p>
+
+
+<div class="scale">
+
+<div class="face" onclick="next(3)">😊</div>
+<div class="face" onclick="next(3)">🙂</div>
+<div class="face" onclick="next(3)">😐</div>
+<div class="face" onclick="next(3)">😕</div>
+<div class="face" onclick="next(3)">😔</div>
+<div class="face" onclick="next(3)">🥺</div>
+<div class="face" onclick="next(3)">😭</div>
+<div class="face" onclick="next(3)">💔</div>
+<div class="face" onclick="next(3)">🥀</div>
+<div class="face" onclick="next(3)">😢</div>
+
+</div>
+
+</div>
+
+
+
+
+<!-- SCENE 3 -->
+
+<div class="scene" id="s3">
+
+
+<h1>Damn... okay 😤💗</h1>
+
+
+<p>
+Okay...
+we can work with that.
+</p>
+
+
+<div class="person">
+
+<div class="hair"></div>
+
+<div class="head">
+
+<div class="eye left"></div>
+<div class="eye right"></div>
+
+<div class="smile"></div>
+
+</div>
+
+
+<div class="body girlDress"></div>
+
+</div>
+
+
+
+<p>
+"First, Mr Perfectly Fine..."
+</p>
+
+
+<p>
+"I want you to know...
+you're mine 🤭❤️"
+</p>
+
+
+<div class="flower">
+💐
+</div>
+
+
+<button onclick="next(4)">
+Follow me 🌸
+</button>
+
+
+</div>
+
+
+
+
+
+<!-- SCENE 4 -->
+
+
+<div class="scene" id="s4">
+
+
+<h1>Your favourite person is here 🤓</h1>
+
+
+<div class="person">
+
+<div class="hair"></div>
+
+<div class="head">
+
+<div class="eye left"></div>
+<div class="eye right"></div>
+
+<div class="glasses">
+🤓
+</div>
+
+</div>
+
+
+<div class="body boyShirt"></div>
+
+</div>
+
+
+<p>
+The boy with glasses...
+who makes her smile 💗
+</p>
+
+
+<button onclick="next(5)">
+To the garden 🌷
+</button>
+
+
+</div>
+
+<!-- SCENE 5 : GARDEN -->
+
+<div class="scene" id="s5" style="background:linear-gradient(#d8f7d8,#fff);">
+
+<h1>Welcome to our little garden 🌷</h1>
+
+<div class="flower">
+🌹🌻🌷
+</div>
+
+
+<p>
+Look around...
+every flower is different.
+</p>
+
+<p>
+Just like you.
+</p>
+
+
+<button onclick="next(6)">
+Look closer 🌸
+</button>
+
+</div>
+
+
+
+
+
+<!-- SCENE 6 : FLOWER MESSAGE -->
+
+<div class="scene" id="s6">
+
+
+<h1>Hey Pavy... 💗</h1>
+
+
+<div class="flower">
+🌺
+</div>
+
+
+<p>
+Some days you will bloom 🌸
+</p>
+
+<p>
+Some days you will rest 🌱
+</p>
+
+<p>
+Some days you will heal 🤍
+</p>
+
+
+<p>
+But promise me one thing...
+</p>
+
+<h1>
+You will bloom again ✨
+</h1>
+
+
+<button onclick="next(7)">
+Keep walking 🌸
+</button>
+
+
+</div>
+
+
+
+
+
+<!-- SCENE 7 : CHERRY BLOSSOM MOMENT -->
+
+
+<div class="scene" id="s7">
+
+
+<div class="petals" style="left:10%">
+🌸
+</div>
+
+<div class="petals" style="left:30%;animation-delay:1s">
+🌸
+</div>
+
+<div class="petals" style="left:60%;animation-delay:2s">
+🌸
+</div>
+
+
+<h1>
+A little reminder...
+</h1>
+
+
+
+<div class="person">
+
+
+<div class="hair"></div>
+
+<div class="head">
+
+<div class="eye left"></div>
+<div class="eye right"></div>
+
+<div class="glasses">
+🤓
+</div>
+
+</div>
+
+
+<div class="body boyShirt"></div>
+
+</div>
+
+
+
+
+<div class="person">
+
+
+<div class="hair"></div>
+
+<div class="head">
+
+<div class="eye left"></div>
+<div class="eye right"></div>
+
+<div class="smile"></div>
+
+</div>
+
+
+<div class="body girlDress"></div>
+
+</div>
+
+
+
+<p>
+Cherry blossoms fall...
+</p>
+
+
+<p>
+and he looks at her and remembers...
+</p>
+
+
+<h1>
+"I am loved." ❤️
+</h1>
+
+
+<button onclick="next(8)">
+Next 🌸
+</button>
+
+
+</div>
+
+
+
+
+
+<!-- SCENE 8 : HAPPY TOGETHER -->
+
+
+<div class="scene" id="s8">
+
+
+<h1>
+Look at us 💗
+</h1>
+
+
+<div style="font-size:90px;">
+👧💗👦
+</div>
+
+
+<p>
+Two silly people...
+</p>
+
+
+<p>
+laughing, healing,
+and choosing each other.
+</p>
+
+
+<div class="flower">
+🌸
+</div>
+
+
+<button onclick="next(9)">
+One more thing 🤭
+</button>
+
+
+</div>
+<!-- SCENE 9 : BATTERY -->
+
+<div class="scene" id="s9">
+
+
+<h1>
+Sometimes life is like this... 💗
+</h1>
+
+
+<div style="font-size:55px;">
+🔋100% ❤️ 🔋100%
+</div>
+
+
+<p>
+Some days everything feels perfect ✨
+</p>
+
+
+
+<div style="font-size:55px;">
+🔋100% ❤️ 🔋50%
+</div>
+
+
+<p>
+Some days one of us needs extra love 🤍
+</p>
+
+
+
+
+<div style="font-size:55px;">
+🔋10% ❤️ 🔋10%
+</div>
+
+
+<p>
+And some days we both need someone.
+</p>
+
+
+
+<button onclick="next(10)">
+Remember this ❤️
+</button>
+
+
+</div>
+
+
+
+
+
+
+<!-- SCENE 10 : NEVER ALONE -->
+
+
+<div class="scene" id="s10">
+
+
+<h1>
+Pavy... listen 🥺
+</h1>
+
+
+<div style="font-size:100px;">
+👧🤍👦
+</div>
+
+
+
+<p>
+No matter how hard the day gets...
+</p>
+
+
+<p>
+You are never alone.
+</p>
+
+
+<p>
+I am with you.
+</p>
+
+
+<p>
+And I will always love you ❤️
+</p>
+
+
+<div class="flower">
+🌹
+</div>
+
+
+
+<button onclick="next(11)">
+Come here 🤭
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- SCENE 11 : HUG -->
+
+<div class="scene" id="s11">
+
+
+<h1>
+Big hug incoming 🤍
+</h1>
+
+
+<div style="font-size:100px;
+animation:hug 2s infinite;">
+👧🫂👦
+</div>
+
+
+<p>
+Because sometimes all you need is someone saying...
+</p>
+
+
+<h1>
+"I've got you." 💗
+</h1>
+
+
+<button onclick="next(12)">
+Sleepy time 🌙
+</button>
+
+
+</div>
+
+
+
+
+
+
+<!-- SCENE 12 : COZY BED -->
+
+
+<div class="scene" id="s12">
+
+
+<h1>
+Rest now, my love 🌙
+</h1>
+
+
+<div style="font-size:100px;">
+🛌🤍
+</div>
+
+
+<p>
+Wrapped in a warm blanket...
+</p>
+
+
+<p>
+safe, happy and loved.
+</p>
+
+
+<p>
+Tomorrow is another chance to shine ✨
+</p>
+
+
+
+<button onclick="next(13)">
+Your surprise 💌
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- SCENE 13 : CALENDAR -->
+
+
+<div class="scene" id="s13">
+
+
+<h1>
+A little promise 💗
+</h1>
+
+
+<div style="
+background:white;
+padding:30px;
+border-radius:25px;
+display:inline-block;
+box-shadow:0 0 20px #ffc1da;
+font-size:25px;
+">
+
+
+📅 Monday
+
+<br><br>
+
+❤️ I'll cheer you up here ❤️
+
+
+</div>
+
+
+
+<p>
+Because your smile is my favourite thing 🤭
+</p>
+
+
+
+<div class="flower">
+🌸🌸🌸
+</div>
+
+
+<button onclick="next(14)">
+Final message 💕
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- FINAL SCENE -->
+
+
+<div class="scene" id="s14">
+
+
+<h1>
+For my Pavy ❤️
+</h1>
+
+
+<div style="font-size:100px;">
+🌸💗🌸
+</div>
+
+
+<p>
+Even on your darkest days...
+</p>
+
+
+<p>
+I hope you remember:
+</p>
+
+
+<h1>
+You are loved.
+You are special.
+You are mine. 🤭❤️
+</h1>
+
+
+<p>
+Now smile a little okay? 🌷
+</p>
+
+
+<div class="flower">
+💐
+</div>
+
+
+</div>
+
+
+
+
+
+<style>
+
+@keyframes hug{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.15);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+
+
+</style>
+
+
+
+
+
+<script>
+
+function next(number){
+
+document.querySelectorAll(".scene")
+.forEach(scene=>{
+scene.classList.remove("active");
+});
+
+
+document.getElementById("s"+number)
+.classList.add("active");
+
+}
+
+
+</script>
